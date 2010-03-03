@@ -13,6 +13,7 @@ desc 'Clean project'
 task :clean do |t|
   puts '>>>> cleaning project <<<<'
   FileUtils.rm_r 'build', :force => true, :verbose => VERBOSE
+  FileUtils.rm_r 'bin', :force => true, :verbose => VERBOSE
   FileUtils.rm_r 'doc', :force => true, :verbose => VERBOSE
 end
  
