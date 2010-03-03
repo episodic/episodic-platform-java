@@ -1,0 +1,7 @@
+com.episodic.platform.client
+com.episodic.platform.client.exception
+com.episodic.platform.client.response
+com.episodic.platform.client.response.analytics
+com.episodic.platform.client.response.query
+com.episodic.platform.client.response.write
+com.episodic.platform.client.util
