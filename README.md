@@ -3,6 +3,8 @@ Java client library for Episodic's Platform REST API
 
 For more information about Episodic's Platform API see [http://app.episodic.com/help/server_api](http://app.episodic.com/help/server_api)
 
+Javadocs are located at [http://episodic.github.com/episodic-platform-java/doc/index.html](http://episodic.github.com/episodic-platform-java/doc/index.html)
+
 Getting Started
 ---------------------------
 
