@@ -1,12 +1,14 @@
-Java client library for Episodic's Platform REST API (http://app.episodic.com/help/server_api)
+Java client library for Episodic's Platform REST API
 ===============
+
+For more information about Episodic's Platform API see [http://app.episodic.com/help/server_api](http://app.episodic.com/help/server_api)
 
 Getting Started
 ---------------------------
 
 ### Downloading A Release Package
 
-The recommended way to get the Episodic Platform SDK for Java is to download the latest release zip from [http://github.com/jfs/mechjack/downloads](http://github.com/jfs/mechjack/downloads). Unpack this zip somewhere, grab the episodic-platform-sdk-[VERSION].jar and add it to your project.
+The recommended way to get the Episodic Platform SDK for Java is to download the latest release zip from [http://github.com/episodic/episodic-platform-java/downloads](http://github.com/episodic/episodic-platform-java/downloads). Unpack this zip somewhere, grab the episodic-platform-sdk-[VERSION].jar and add it to your project.
 
 ### Including The Required Jar Files
 

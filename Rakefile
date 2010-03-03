@@ -1,6 +1,7 @@
 require 'rake'
 require 'fileutils'
 require 'zip/zip'
+require 'zippy'
  
 VERBOSE = ENV['VERBOSE'] || false
 PROJECT_NAME = 'episodic-platform-sdk-java'
@@ -46,10 +47,16 @@ desc 'Package project'
 task :package => [:clobber, :compile, :doc] do |t|
   puts '>>>> packaging project <<<<'
   execute "jar cf #{PROJECT_NAME.downcase}.jar -C build/java ."
-  Zip::ZipFile.open("#{PROJECT_NAME.downcase}-#{PROJECT_VERSION}.zip", Zip::ZipFile::CREATE) do |zipfile|
-    zipfile.add("#{PROJECT_NAME.downcase}-#{PROJECT_VERSION}.jar","#{PROJECT_NAME.downcase}.jar")
-    zipfile.add('LICENSE','LICENSE')
-    zipfile.add('README','README.md')
+  Zippy.create "#{PROJECT_NAME.downcase}-#{PROJECT_VERSION}.zip" do |zip|
+    zip['README'] = File.open('README.md')
+    zip['LICENSE'] = File.open('LICENSE')
+    zip["#{PROJECT_NAME.downcase}-#{PROJECT_VERSION}.jar"] = File.open("#{PROJECT_NAME.downcase}.jar")
+    Dir['doc/**/*.*'].each do |filename|
+      zip[filename] = File.open(filename) 
+    end
+    Dir['src/**/*.*'].each do |filename|
+      zip[filename] = File.open(filename) 
+    end
   end
 end
  
