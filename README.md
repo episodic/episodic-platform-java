@@ -91,4 +91,8 @@ License
 Episodic Platform SDK for Java
 Copyright (c) 20010 by Episodic, Inc.  
 Licensed under the terms of The MIT License.  
-Please see the LICENSE included with this distribution for details.  
+Please see the LICENSE included with this distribution for details. 
+
+Attributions
+------------------------------------------------------
+Special thanks to the [http://yestech.org/](YES Technology Association) for writing the initial [http://github.com/yestech/yesepisodic](Episodic client library) as some code was borrowed from it. 
