@@ -95,4 +95,4 @@ Please see the LICENSE included with this distribution for details.
 
 Attributions
 ------------------------------------------------------
-Special thanks to the [http://yestech.org/](YES Technology Association) for writing the initial [http://github.com/yestech/yesepisodic](Episodic client library) as some code was borrowed from it. 
+Special thanks to the [YES Technology Association](http://yestech.org/) for writing the initial [Episodic client library](http://github.com/yestech/yesepisodic) as some code was borrowed from it. 
