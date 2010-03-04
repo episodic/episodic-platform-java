@@ -71,7 +71,7 @@ After creating a connection you need to set it on the service before making any 
     // Now upload the video and thumbnail.  It is best to upload the thumbnail first since it is usually smaller.
     File thumbnail = new File("/home/videos/my_thumb.png");
     writeService.uploadFileForEpisode(response.getUploadForFile(thumbnail), thumbnail);
-    video = new File("/home/videos/video.mp4");
+    File video = new File("/home/videos/video.mp4");
     writeService.uploadFileForEpisode(response.getUploadForFile(video), video);
   
 ### Handling Errors
