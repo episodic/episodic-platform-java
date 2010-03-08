@@ -5,7 +5,7 @@ require 'zippy'
  
 VERBOSE = ENV['VERBOSE'] || false
 PROJECT_NAME = 'episodic-platform-sdk-java'
-PROJECT_VERSION = '0.9'
+PROJECT_VERSION = '0.9.1'
  
 desc 'Clean project, compile java source and run tests'
 task :default => [:clean, :compile]
@@ -29,7 +29,7 @@ desc 'Compile java source'
 task :compile do |t|
   puts '>>>> compiling java source <<<<'
   FileUtils.mkdir_p 'build/java', :verbose => VERBOSE
-  command = "javac -classpath #{compile_classpath} -d build/java #{java_source}"
+  command = "javac -target 5 -classpath #{compile_classpath} -d build/java #{java_source}"
   puts command
   execute command
 end
