@@ -80,4 +80,26 @@ public class WriteServiceTest extends BaseServiceTest {
 		writeService.uploadFileForEpisode(updateResponse
 				.getUploadForFile(video), video);
 	}
+	
+	@Test
+	public void testCreateUpdateEpisodeWithoutVideo() throws Exception {
+
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("description", "who cares");
+		CreateEpisodeResponse response = writeService.createEpisode(
+				"pdn9djrwu8sh", "My New Episode " + new Date().getTime(),
+				params);
+
+		// Now update the video on the episode
+		Map<String, Object> updateParams = new HashMap<String, Object>();
+		updateParams.put("upload_types", "s3");
+		updateParams.put("video_filename", "3-0.m4v");
+		updateParams.put("off_air_date", new Date().getTime() / 1000L);
+		UpdateEpisodeResponse updateResponse = writeService.updateEpisode(
+				response.getEpisodeId(), updateParams);
+
+		File video = new File(currentPath + "/src/test/media/3-0.m4v");
+		writeService.uploadFileForEpisode(updateResponse
+				.getUploadForFile(video), video);
+	}
 }
