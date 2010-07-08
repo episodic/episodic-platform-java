@@ -74,11 +74,11 @@ public class AnalyticsService extends BaseService {
 				return "last_thirty";
 			}
 		},
-        ALL_TIME {
-            public String toString() {
-                return "all_time";
-            }
-        }
+                ALL_TIME {
+                        public String toString() {
+                                return "all_time";
+                        }
+                }
 	}
 
 	/**
